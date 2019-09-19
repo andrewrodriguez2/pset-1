@@ -21,7 +21,8 @@ public class ProblemSet1 {
          * 
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        
+        int area = 8.5 * 11 ;
+		System.out.println(area + "square millimeters");
         
         
         /*
