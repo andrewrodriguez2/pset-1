@@ -157,7 +157,14 @@ public class ProblemSet1 {
          * 
          * What is the surface area of a standard Cornhole board?
          */
-        
+        double bl = 48;
+		double bh = 24;
+		double dd = 6;
+		
+		double blh = bl * bh;
+		double bda = 3.14 *((6/2)*(6/2));
+		double barea = blh - bda - .01;
+		System.out.println(barea + " square inches.");
         
         
         /*
@@ -165,7 +172,29 @@ public class ProblemSet1 {
          * 
          * Are the years 2020, 2100, and 2400 leap years?
          */
+
         
+      boolean ilpy1;
+      double year1 = 2020;
+ 
+      ilpy1 = (year1 % 4 == 0);
+
+   	  boolean ilpy2;
+      double year2 = 2100;
+      ilpy2 = (year2 % 4 == 0);
+      ilpy2 = ilpy2 && (year2 % 100 != 0);
+	  
+	  boolean ilpy3;
+      double year3 = 2400;
+      ilpy3 = (year3 % 4 == 0);
+      ilpy3 = ilpy3 && (year3 % 100 != 0);
+      ilpy3 = ilpy3 || (year3 % 400 == 0);
+
+      System.out.println("2020 is a leap year " + ilpy1);
+	  System.out.println("2100 is a leap year " + ilpy2);
+	  System.out.println("2400 is a leap year " + ilpy3);
+        
+      
         
         
         /*
@@ -173,8 +202,12 @@ public class ProblemSet1 {
          * 
          * What is the wind chill?
          */
-        
-        
-        
+        double to = 38;
+		double v = 14;
+		double quation = 35.74 + (0.6215 * to) + (((0.4275 * to) - 35.75)* Math.pow(v, 0.16));
+		
+		System.out.println("\n" + (Math.round(quation* 100.0)/100.0) + " degrees.");
+
+
     }
 }
