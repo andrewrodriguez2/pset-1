@@ -141,7 +141,15 @@ public class ProblemSet1 {
          * I am planning a class trip next month. How many buses do I need, and how many
          * people will be on the last bus?
          */
-        
+        int std = 273;
+		int tch = 28;
+		int bc = 54;
+		
+		int peep = std + tch;
+		double rp = peep % bc;
+		double ap = peep - rp;
+		double bus = ap / bc + 1;
+		System.out.println( bus+" buses are needed, with " + rp +" passengers on the last bus.");
         
         
         /*
