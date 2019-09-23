@@ -126,13 +126,12 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 		double fit = .24;
-		double sit = .637;
-		double ct = .7;
+		double sit = .0637;
+		double ct = .07;
         double check = 117000 / 24;
-		double tax = (check* fit + check * sit + check * ct);
-		double payday = check - tax;
-		double homepay = Math.round(payday *100.00)/100.0;
-		System.out.println(homepay);
+		double tax = ((check -(check* fit))-(((check -(check* fit))* sit)))-(((check -(check* fit))-(((check -(check* fit))* sit)))*ct);
+		double homepay = Math.round(tax *100.00)/100.0;
+		System.out.println("$"+homepay);
 		
         
         
