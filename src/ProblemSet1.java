@@ -1,16 +1,18 @@
 /**
  * Problem Set 1.
  * 
- * It's time to put your skills to the test. This problem set focuses on using
+ * It's time to put your skills to the t. this problem set focuses on using
  * primitive data types, variables, and basic operators and functions.
  * 
- * The specifications for each exercise are outlined below. Your output is
+ * the specifications for each exercise are outlined below. Your output is
  * expected to meet requirements set forth in this section (as well as the
  * Deliverables section).
  * 
  * Work through these exercises on your own. Experiment, make mistakes, ask
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
+
+import java.lang.Math; 
 
 public class ProblemSet1 {
     
@@ -21,8 +23,13 @@ public class ProblemSet1 {
          * 
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        int area = 8.5 * 11 ;
-		System.out.println(area + "square millimeters");
+        double heightin = 8.5;
+		int widthin = 11;
+		double heightms = heightin *25.4;
+		double widthms = widthin *25.4;
+		double area = heightms * widthms;
+		double rounded = Math.round(area*100.0)/100.0;
+		System.out.println(rounded + " square millimeters.");
         
         
         /*
@@ -30,7 +37,13 @@ public class ProblemSet1 {
          * 
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        
+        double heighti = 8.5;
+		int widthi = 11;
+		double heightcm = heightin *2.54;
+		double widthcm = widthin *2.54;
+		double perimeter = heightcm * 2 + widthcm * 2;
+		double ronded = Math.round(perimeter *100.0)/100.0;
+		System.out.println(ronded + " centimeters.");
         
         
         /*
@@ -39,43 +52,88 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-        
+		double a = 8.5;
+		int b = 11;
+		double c = b * b + a * a ; 
+		double diagonal = Math.sqrt(c);
+		double diagonalend = Math.round(diagonal *100.0)/100.0;
+		System.out.println(diagonalend + "0 inches.");
         
 
         /*
          * Exercise 4.
          * 
-         * Given the grading policy and the homework, quiz, and test grades I received,
+         * Given the grading policy and the hw, q, and t grades I received,
          * what marking period grade will I get?
+		 * HW 15%
+		 * qzes 35%
+		 *ts 50%
          */
-        
-        int homework1 = 88;
-        int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
-        
-        
-        
+        double HW = .15;
+		double Q = .35;
+		double T = .50;
+		
+	
+        int hw1 = 88;
+        int hw2 = 91;
+        int hw3 = 0;
+        int q1 = 84;
+        int q2 = 89;
+        int q3 = 93;
+        int t1 = 74;
+        int t2 = 87;
+        int t3 = 82;
+		
+        double hwadd = ((hw1 * HW+hw2*HW+hw3*HW)/3);
+        double qadd = (((q1 * Q)+(q2*Q)+(q3*Q))/3);
+		double tadd = (((t1 * T)+(t2*T)+(t3*T))/3);
+		double grade = hwadd + qadd + tadd;
+		double gradeend = Math.round(grade *100.00)/100.0;
+		System.out.println(gradeend + "%.");
+		
         /*
          * Exercise 5.
          * 
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
+		 Monday, 7.5 hours
+		 Tuesday, 8 hours
+		 Wednesday, 10.5 hours
+		 Thursday, 9.5 hours
+		 Friday, 6 hours
+		 Saturday, 11.5 hours
+		 Sunday, 0 hours
          */
-
-        
+		 double pay = 12.5;
+		 double Mo = pay * 7.5;
+		 double Tu = pay * 8;
+		 double We = pay * 10.5;
+		 double Th = pay * 9.5;
+		 double Fr = pay * 6;
+		 double Sa = pay * 11.5;
+		 double Su = pay * 0;
+		 double totalpay = Mo + Tu + We + Th + Fr + Sa + Su;
+		 double payend = Math.round(totalpay *100.00)/100.0;
+		 System.out.println("$" + payend + "0.");
+		
+		
+		
+		
         
         /*
          * Exercise 6.
          * 
          * What is my take-home pay each check?
          */
-        
+		double fit = .24;
+		double sit = .637;
+		double ct = .7;
+        double check = 117000 / 24;
+		double tax = (check* fit + check * sit + check * ct);
+		double payday = check - tax;
+		double homepay = Math.round(payday *100.00)/100.0;
+		System.out.println(homepay);
+		
         
         
         /*
